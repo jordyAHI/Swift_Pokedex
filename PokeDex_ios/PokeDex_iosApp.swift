@@ -15,7 +15,9 @@ struct PokeDex_iosApp: App {
         WindowGroup {
 //            PokedexView()
 //                .environment(\.managedObjectContext, dataController.container.viewContext)
-            LocalPushNotification()
+//            ScenePhaseTest()
+//            LocalPushNotification()
+            AnimationViewTest()
         }
     }
 }
