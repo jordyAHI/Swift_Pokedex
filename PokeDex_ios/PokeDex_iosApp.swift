@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct PokeDex_iosApp: App {
+    @StateObject private var  dataController =  DataController()
+    
     var body: some Scene {
         WindowGroup {
-            PokedexView()
+//            PokedexView()
+//                .environment(\.managedObjectContext, dataController.container.viewContext)
+            LocalPushNotification()
         }
     }
 }

@@ -37,4 +37,14 @@ extension Pokemon {
             }
         }
     }
+    
+    var total: Int {
+        get {
+            return (height + weight + attack + defense)/4
+        }
+    }
 }
+
+let MOCK_POKEMON : [Pokemon] = [
+    Pokemon(id: 1, name: "Sabrimon", imageUrl: "1", type: "water", description: "Loves to play at the beach for years on end", height: 200, attack: 10, defense: 200, weight: 10)
+]

@@ -19,6 +19,9 @@
 		0243395B27C355B90000708D /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243395A27C355B90000708D /* PokemonViewModel.swift */; };
 		0243395E27C35AFD0000708D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0243395D27C35AFD0000708D /* Kingfisher */; };
 		0243396027C36C100000708D /* PokemonDetailsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243395F27C36C100000708D /* PokemonDetailsCard.swift */; };
+		0260A20827C71F7500CF720F /* LocalPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260A20727C71F7500CF720F /* LocalPushNotification.swift */; };
+		02F4681927C4D66A00A9ABA6 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02F4681727C4D66A00A9ABA6 /* UserData.xcdatamodeld */; };
+		02F4681B27C4D6DF00A9ABA6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4681A27C4D6DF00A9ABA6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		0243395827C353EC0000708D /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0243395A27C355B90000708D /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 		0243395F27C36C100000708D /* PokemonDetailsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsCard.swift; sourceTree = "<group>"; };
+		0260A20727C71F7500CF720F /* LocalPushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushNotification.swift; sourceTree = "<group>"; };
+		02F4681827C4D66A00A9ABA6 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		02F4681A27C4D6DF00A9ABA6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		0243392627C343090000708D /* PokeDex_ios */ = {
 			isa = PBXGroup;
 			children = (
+				02F4681627C4D64B00A9ABA6 /* Data */,
 				0243395127C3436D0000708D /* Model */,
 				0243395227C343750000708D /* View */,
 				0243395327C343790000708D /* ViewModel */,
@@ -153,6 +160,7 @@
 				0243395427C343B40000708D /* PokemonCell.swift */,
 				0243395627C352970000708D /* PokedexView.swift */,
 				0243395F27C36C100000708D /* PokemonDetailsCard.swift */,
+				0260A20727C71F7500CF720F /* LocalPushNotification.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +171,15 @@
 				0243395A27C355B90000708D /* PokemonViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02F4681627C4D64B00A9ABA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				02F4681727C4D66A00A9ABA6 /* UserData.xcdatamodeld */,
+				02F4681A27C4D6DF00A9ABA6 /* DataController.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +322,11 @@
 				0243395B27C355B90000708D /* PokemonViewModel.swift in Sources */,
 				0243396027C36C100000708D /* PokemonDetailsCard.swift in Sources */,
 				0243392827C343090000708D /* PokeDex_iosApp.swift in Sources */,
+				0260A20827C71F7500CF720F /* LocalPushNotification.swift in Sources */,
 				0243395527C343B40000708D /* PokemonCell.swift in Sources */,
+				02F4681B27C4D6DF00A9ABA6 /* DataController.swift in Sources */,
 				0243395727C352970000708D /* PokedexView.swift in Sources */,
+				02F4681927C4D66A00A9ABA6 /* UserData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +692,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		02F4681727C4D66A00A9ABA6 /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02F4681827C4D66A00A9ABA6 /* UserData.xcdatamodel */,
+			);
+			currentVersion = 02F4681827C4D66A00A9ABA6 /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0243391C27C343090000708D /* Project object */;
 }

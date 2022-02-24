@@ -9,7 +9,14 @@ import SwiftUI
 
 class PokemonViewModel: ObservableObject {
     @Published var pokemon = [Pokemon]()
-    let baseUrl = ""
+    let baseUrl = "https://pokedex-bb36f.firebaseio.com/pokemon.json"
+//    @FetchRequest(
+//      // 2
+//      entity: UserData.entity(),
+//      // 3
+//      sortDescriptors: []
+//    // 4
+//    ) var userData: FetchedResults<UserData>
     
     init() {
         fetchPokemon()
