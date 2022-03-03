@@ -9,15 +9,20 @@ import SwiftUI
 
 @main
 struct PokeDex_iosApp: App {
-    @StateObject private var  dataController =  DataController()
-    
+    @StateObject private var dataController =  DataController()
+//    @StateObject private var vm = DataController()
+
     var body: some Scene {
         WindowGroup {
-//            PokedexView()
-//                .environment(\.managedObjectContext, dataController.container.viewContext)
+            PokedexView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+//                .environmentObject(dataController.container.viewContext)
+
 //            ScenePhaseTest()
 //            LocalPushNotification()
-            AnimationViewTest()
+//            AnimationViewTest()
+//            StopWatchView()
+//                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

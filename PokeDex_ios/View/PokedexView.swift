@@ -23,6 +23,19 @@ struct PokedexView: View {
     var body: some View {
         NavigationView(){
             ScrollView {
+//                TimerView(viewNamerino: "Pokedex view")
+                NavigationLink(destination: DemoView1()){
+                    Text("DemoView1")
+                }
+                NavigationLink(destination: DemoView2()){
+                    Text("DemoView2")
+                }
+                NavigationLink(destination: DemoView3()){
+                    Text("DemoView3")
+                }
+                NavigationLink(destination: StopWatchView()){
+                    Text("View Time Recordings")
+                }
                 Button("Add") {
                     let firstNames = ["Ginny", "Harry", "Hermoine", "Luna", "Ron"]
                     let lastNames = ["Ginny", "Harry", "Hermoine", "Luna", "Ron"]
@@ -34,7 +47,6 @@ struct PokedexView: View {
                     userData.id = UUID()
                     userData.type = "Fire"
                     userData.name = "\(chosenFirstName) \(chosenLastName)"
-//                    print(userData)
                     try? moc.save()
                 }
                 LazyVGrid(columns: gridItems, spacing: 16) {

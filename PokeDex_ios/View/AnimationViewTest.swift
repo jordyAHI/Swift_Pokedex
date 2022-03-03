@@ -10,9 +10,19 @@ import SwiftUI
 struct AnimationViewTest: View {
     @State var isAnimated: Bool = false
     @State var Xlocation: Double = 0
+    @State var tapCounter: Int = 0
+//    @State private var playerPosition = CGPoint()
+    
+    
+    func increaseCount() {
+        tapCounter += 1
+    }
+    
+//    func getPlayerPos() {
+//        playerPosition =
+//    }
     
     func MoveXDirection(moveAmount: Double) {
-        print("XLocation: \(Xlocation)")
         Xlocation += moveAmount
     }
     
@@ -22,6 +32,15 @@ struct AnimationViewTest: View {
                 isAnimated.toggle()
             }
         }
+        HStack {
+            Text("Tap Count: \(tapCounter)")
+            Spacer()
+            Text("XLocation: \(Xlocation)")
+            Spacer()
+            Text("Score: \(0)")
+        }
+        .padding(.top, 10)
+        .padding(.horizontal, 10)
         Spacer()
         RoundedRectangle(cornerRadius: isAnimated ? 50 : 25)
             .fill(isAnimated ? Color.pink : Color.green)
@@ -33,6 +52,7 @@ struct AnimationViewTest: View {
             .onTapGesture {
                 withAnimation(.default){
                     isAnimated.toggle()
+                    increaseCount()
                 }
             }
         Spacer()
@@ -52,6 +72,7 @@ struct AnimationViewTest: View {
                 .onTapGesture {
                     withAnimation(.default) {
                         MoveXDirection(moveAmount: -15)
+                        increaseCount()
                     }
                 }
             Spacer()
@@ -62,6 +83,7 @@ struct AnimationViewTest: View {
                 .onTapGesture {
                     withAnimation(.default) {
                         MoveXDirection(moveAmount: 15)
+                        increaseCount()
                     }
                 }
         }
